@@ -1,0 +1,558 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;600&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ######################### Navbar ######################### */
+
+.navbar {
+  padding: 2rem;
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  height: 10rem;
+  background-color: #ffffff;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-around;
+  height: 6rem;
+  align-items: center;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.menu-items {
+  width: 45rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.menu-items li {
+  margin-left: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.cart-container {
+  width: 28rem;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-btn {
+  margin-left: 0.1rem;
+}
+
+.header-btn .btn {
+  height: 4.5rem;
+  line-height: 4.5rem;
+  padding: 0 4.5rem;
+}
+
+.btn {
+  display: inline-block;
+  overflow: hidden;
+  transform: perspective(0) translateZ(0);
+  background: linear-gradient(195deg, #086ad8 0%, #42b9ff 100%);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  border-color: transparent;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-style: solid;
+  box-shadow: none;
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+}
+
+.btn::before {
+  content: "";
+  background: #0e0e0e;
+  height: 50%;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: -1;
+}
+
+.btn::after {
+  content: "";
+  background: #0e0e0e;
+  height: 50%;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: -1;
+}
+
+/* ########################### Banner ########################## */
+
+.section,
+.main-wrapper {
+  float: left;
+  width: 100%;
+}
+
+.showcase-area {
+  max-width: 100%;
+  background: linear-gradient(
+      rgba(240, 240, 240, 0.144),
+      rgba(255, 255, 255, 0.366)
+    ),
+    url(./img/study-4k.jpeg);
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 8.5rem;
+  min-height: 67rem;
+}
+
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.6rem;
+}
+
+.main-title {
+  font-size: 5rem;
+  font-family: "Barlow", sans-serif;
+}
+
+.list {
+  display: flex;
+  margin-top: 1rem;
+  width: 17rem;
+  font-size: 2rem;
+  justify-content: space-between;
+}
+
+.list a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.list a:hover {
+  color: #254dff;
+}
+
+.list li {
+  display: block;
+  list-style: none;
+}
+
+/* ############################ WHO WE ARE IMAGE ############################# */
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20rem;
+  margin-left: 3.5rem;
+  height: 50rem;
+}
+
+.about-wrapper .about-img-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.about-img-wrap img {
+  display: block;
+  width: 30rem;
+  height: 45rem;
+  border-radius: 1rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image1 img {
+  position: relative;
+  margin-right: 1rem;
+  top: -3.5rem;
+}
+
+.image2 img {
+  position: relative;
+  margin-right: 5rem;
+  top: 3.5rem;
+}
+
+/* ############################ WHO WE ARE TEXT ############################# */
+
+.about-text-wrap {
+  padding-left: 5rem;
+  margin-right: 4rem;
+  width: 55rem;
+}
+
+.about-text-wrap .who-we-are {
+  color: #086ad8;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.about-text-wrap .heading {
+  font-size: 5rem;
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 2rem;
+}
+
+.about-para {
+  font-family: "Jost", sans-serif;
+  font-size: 1.6rem;
+  color: #4c4d56;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.line {
+  border-bottom: 0.2rem solid #e9ecef;
+  margin-bottom: 3rem;
+}
+
+.mission-code {
+  display: flex;
+}
+
+.mission-code .mission {
+  margin-right: 4rem;
+}
+
+.mission-code .mission-heading,
+.mission-code .code-heading {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.mission-code .mission-text,
+.mission-code .code-text {
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+}
+
+/* ############################### Conter Section ################################ */
+
+.counter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 85%;
+  height: 25rem;
+  margin: auto;
+  margin-top: 15rem;
+  margin-bottom: 10rem;
+  border-radius: 2rem;
+  background: linear-gradient(90deg, #9d08d8 0%, #42b9ff 100%);
+}
+
+.counter-row .number,
+.counter-row .text {
+  text-align: center;
+  color: #ffffff;
+}
+
+.counter-row .number {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+}
+
+.counter-row .text {
+  font-size: 1.4rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+}
+
+/* ################################ Choose Us Wrap ################################ */
+
+.container3 {
+  height: 20rem;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+.container3 .container3-heading {
+  margin-top: 5rem;
+  text-transform: uppercase;
+  color: #086ad8;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.container3 .container3-text {
+  font-size: 5rem;
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* ############################### Card Container ########################### */
+
+.container4 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container4 .card {
+  height: 29rem;
+  width: 20%;
+  margin: 2rem;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0px 5px 10px 0px #aaa;
+}
+
+.card-icon,
+.card-heading,
+.card-text {
+  padding: 1rem;
+}
+
+.container4 .card .card-heading {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.container4 .card .card-text {
+  font-family: "Jost", sans-serif;
+  font-size: 1.4rem;
+  color: #4c4d56;
+  line-height: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+/* ######################### Skillbar Container (Container5) ####################### */
+
+.container5 {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  margin-top: 20rem;
+}
+
+.container5-left {
+  width: 300rem;
+}
+
+.container5-left-heading {
+  font-size: 4.5rem;
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.container5-left .check {
+  color: #086ad8;
+}
+
+.container5-left-skill {
+  font-size: 1.6rem;
+  line-height: 3.6rem;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  color: #333333;
+  list-style: none;
+}
+
+.container5-left .line {
+  margin-top: 2rem;
+  width: 45rem;
+  border-bottom: 0.2rem solid #e9ecef;
+  margin-bottom: 3rem;
+}
+
+.container5 .container5-left .about-author-info-wrap {
+  display: flex;
+}
+
+.container5 .about-author {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  font-family: "Barlow", sans-serif;
+  margin-right: 2rem;
+  color: #0e0e0e;
+}
+
+.vertical-line {
+  border-right: 0.2rem solid #e9ecef;
+  height: 15rem;
+  margin-right: 2rem;
+}
+
+.container5-left .about-info {
+  margin: 4rem 0 0 2rem;
+}
+
+.about-author .sign {
+  margin-bottom: 1.5rem;
+}
+
+.designation {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: "Jost", sans-serif;
+}
+
+.about-info p {
+  font-size: 1.6rem;
+  line-height: 3rem;
+  color: #0e0e0e;
+}
+
+.about-info .number {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  font-weight: 600;
+  color: #086ad8;
+}
+
+.container5-right {
+  margin: 0 5rem 0 10rem;
+}
+
+.container5-right-text {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  padding-bottom: 3rem;
+  font-weight: 400;
+  font-family: "Jost", sans-serif;
+  color: #4c4d56;
+}
+
+/* ############################# Skill Progress Bar ################################### */
+
+.skill-name {
+  font-size: 1.4rem;
+  line-height: 4.5rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  color: #120e1d;
+}
+
+.skills {
+  width: 100%;
+  max-width: 60rem;
+  padding: 0 2rem;
+}
+
+.skill-bar {
+  height: 0.5rem;
+  background: #fff;
+  border-radius: 0.3rem;
+  margin-bottom: 3rem;
+}
+
+.skill-per {
+  height: 0.5rem;
+  background: #086ad8;
+  border-radius: 1rem;
+  position: relative;
+  animation: fillBars 3s 1;
+}
+
+.skill-per::before {
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background: #f1f1f1;
+  border-radius: 4px;
+  font-size: 12px;
+  top: -35px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.skill-per::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #f1f1f1;
+  top: -20px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+
+@keyframes fillBars {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* ########################### Team ########################## */
+
+/* .container6 {
+  width: 90%;
+  background-image: url();
+  margin: auto;
+}
+
+.container6 .section-title {
+  text-align: center;
+}
+
+.container6 .sub-title {
+  color: #086ad8;
+  font-size: 1.5rem;
+  margin-top: 7rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+} */
