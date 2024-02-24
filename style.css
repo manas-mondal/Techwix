@@ -525,7 +525,7 @@ body {
   top: -20px;
   right: 0;
   transform: translateX(50%) rotate(45deg);
-  border-radius: 2px;
+  border-radius: 0.2rem;
 }
 
 @keyframes fillBars {
@@ -539,10 +539,15 @@ body {
 
 /* ########################### Team ########################## */
 
-/* .container6 {
-  width: 90%;
-  background-image: url();
+.container6 {
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(42, 64, 232, 0.144),
+      rgba(46, 67, 200, 0.366)
+    ),
+    url(./img/background-img.jpeg);
   margin: auto;
+  height: 100vh;
 }
 
 .container6 .section-title {
@@ -552,7 +557,88 @@ body {
 .container6 .sub-title {
   color: #086ad8;
   font-size: 1.5rem;
-  margin-top: 7rem;
+  margin-top: 5rem;
+  padding-top: 10rem;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
-} */
+}
+
+.container6 .main-title {
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+.container6 .card {
+  margin: 10rem 0 0 6rem;
+}
+
+/* ########## carousel ######### */
+
+.container {
+  padding: 2rem;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 50rem;
+}
+
+.slider {
+  display: flex;
+  width: 130rem;
+  margin-left: 5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+  -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider img {
+  /* flex: 1 0 100%; */
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  top: 110%;
+  left: 140%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-nav a {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+}
+
+/* #################### Brand Container ########################## */
+
+.brand-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 10rem;
+}
+
+.brand-name img {
+  margin: 5rem 0 10rem 10rem;
+}
